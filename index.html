@@ -4,23 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>株式会社アドメイト | ADMATE Inc.</title>
-<meta name="description" content="株式会社アドメイト（ADMATE Inc.）— ブランド品のリユース事業。バッグ・時計・ジュエリー・財布・小物を、国内外のマーケットへ。">
+<meta name="description" content="株式会社アドメイト（ADMATE Inc.）— ブランド品のリユース事業。バッグ・時計・ジュエリー・財布・小物を、国内外のマーケットへ。静岡県菊川市。">
 <meta property="og:title" content="株式会社アドメイト | ADMATE Inc.">
 <meta property="og:description" content="ブランド品のリユース事業。確かな品を、次の持ち主へ。">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0a0a0b;
-    --bg-2:#101013;
-    --panel:#141418;
-    --line:rgba(255,255,255,.08);
-    --text:#ececeb;
-    --muted:#9a9a97;
-    --gold:#c9a86a;
-    --gold-soft:#e3cfa3;
+    --bg:#ffffff;
+    --bg-2:#f5f8fc;
+    --panel:#ffffff;
+    --line:rgba(20,45,90,.12);
+    --ink:#0e2540;
+    --text:#22324a;
+    --muted:#6a7c96;
+    --blue:#1857c4;
+    --blue-2:#2f7ff2;
+    --blue-soft:#eaf1fd;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -41,26 +43,26 @@
     text-transform:uppercase;
     letter-spacing:.42em;
     font-size:11px;
-    color:var(--gold);
-    font-weight:400;
+    color:var(--blue);
+    font-weight:500;
   }
 
   /* Header */
   header{
     position:fixed;top:0;left:0;right:0;z-index:50;
     backdrop-filter:blur(12px);
-    background:rgba(10,10,11,.55);
+    background:rgba(255,255,255,.6);
     border-bottom:1px solid transparent;
-    transition:border-color .4s ease, background .4s ease;
+    transition:border-color .4s ease, background .4s ease, box-shadow .4s ease;
   }
-  header.scrolled{border-bottom-color:var(--line);background:rgba(10,10,11,.82)}
+  header.scrolled{border-bottom-color:var(--line);background:rgba(255,255,255,.88);box-shadow:0 6px 30px rgba(20,60,130,.06)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .brand{font-family:"Jost",sans-serif;letter-spacing:.34em;font-size:16px;font-weight:400;padding-left:.34em}
-  .brand span{color:var(--gold)}
-  .menu{display:flex;gap:38px;font-family:"Jost",sans-serif;letter-spacing:.16em;font-size:12.5px;text-transform:uppercase;color:var(--muted)}
+  .brand{font-family:"Jost",sans-serif;letter-spacing:.34em;font-size:16px;font-weight:600;padding-left:.34em;color:var(--ink)}
+  .brand span{color:var(--blue)}
+  .menu{display:flex;gap:38px;font-family:"Jost",sans-serif;letter-spacing:.16em;font-size:12.5px;text-transform:uppercase;color:var(--muted);font-weight:400}
   .menu a{position:relative;transition:color .3s}
-  .menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width .35s ease}
-  .menu a:hover{color:var(--text)}
+  .menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--blue);transition:width .35s ease}
+  .menu a:hover{color:var(--ink)}
   .menu a:hover::after{width:100%}
 
   /* Hero */
@@ -69,95 +71,119 @@
   .hero-bg::before{
     content:"";position:absolute;inset:0;
     background:
-      radial-gradient(1100px 620px at 78% 18%, rgba(201,168,106,.16), transparent 60%),
-      radial-gradient(760px 620px at 8% 92%, rgba(201,168,106,.07), transparent 58%),
-      linear-gradient(180deg,#0a0a0b 0%,#0c0c0f 55%,#0a0a0b 100%);
+      radial-gradient(1200px 680px at 82% 12%, rgba(47,127,242,.16), transparent 60%),
+      radial-gradient(820px 640px at 4% 96%, rgba(24,87,196,.10), transparent 58%),
+      linear-gradient(180deg,#ffffff 0%,#f4f8fe 60%,#ffffff 100%);
   }
-  .grain{position:absolute;inset:0;opacity:.05;mix-blend-mode:overlay;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;opacity:.5;
+    background-image:linear-gradient(rgba(24,87,196,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(24,87,196,.05) 1px,transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(900px 600px at 80% 20%,#000,transparent 75%);
+            mask-image:radial-gradient(900px 600px at 80% 20%,#000,transparent 75%);
+  }
   .hero-inner{position:relative;z-index:2;width:100%}
   .hero h1{
     font-family:"Cormorant Garamond",serif;
-    font-weight:500;
-    font-size:clamp(58px,12vw,150px);
+    font-weight:600;
+    font-size:clamp(58px,12vw,152px);
     line-height:.94;
-    letter-spacing:.02em;
+    letter-spacing:.01em;
     margin:26px 0 8px;
+    color:var(--ink);
   }
-  .hero h1 .amp{color:var(--gold);font-style:italic;font-weight:400}
-  .hero .jp-name{font-size:clamp(16px,2.4vw,22px);letter-spacing:.5em;color:var(--muted);font-weight:300;padding-left:.5em}
+  .hero h1 .amp{color:var(--blue);font-style:italic;font-weight:500}
+  .hero .jp-name{font-size:clamp(16px,2.4vw,22px);letter-spacing:.5em;color:var(--muted);font-weight:400;padding-left:.5em}
   .hero .lead{
-    margin-top:38px;max-width:540px;font-size:15.5px;color:#cfcfca;font-weight:300;line-height:2.05;
+    margin-top:38px;max-width:552px;font-size:15.5px;color:#3a4a63;font-weight:300;line-height:2.05;
   }
   .hero-actions{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   .btn{
     display:inline-flex;align-items:center;gap:12px;
-    font-family:"Jost",sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:12.5px;
-    padding:16px 30px;border:1px solid var(--gold);color:var(--gold-soft);
-    transition:.35s ease;
+    font-family:"Jost",sans-serif;letter-spacing:.16em;text-transform:uppercase;font-size:12.5px;font-weight:500;
+    padding:16px 30px;transition:.35s ease;
   }
-  .btn:hover{background:var(--gold);color:#0a0a0b}
+  .btn-fill{background:var(--blue);color:#fff;box-shadow:0 12px 30px rgba(24,87,196,.28)}
+  .btn-fill:hover{background:var(--ink);box-shadow:0 16px 40px rgba(24,87,196,.34);transform:translateY(-2px)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
   .btn .arw{transition:transform .35s ease}
   .btn:hover .arw{transform:translateX(5px)}
-  .btn-ghost{border-color:var(--line);color:var(--muted)}
-  .btn-ghost:hover{background:transparent;border-color:var(--text);color:var(--text)}
   .scroll-cue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;font-family:"Jost",sans-serif;font-size:10px;letter-spacing:.34em;color:var(--muted);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:12px}
-  .scroll-cue .bar{width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.4s ease-in-out infinite}
+  .scroll-cue .bar{width:2px;height:46px;background:linear-gradient(var(--blue),transparent);animation:cue 2.4s ease-in-out infinite;border-radius:2px}
   @keyframes cue{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
 
   /* Sections */
   section{position:relative}
   .block{padding:130px 0}
   .sec-head{margin-bottom:64px;max-width:720px}
-  .sec-head h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(34px,5.4vw,58px);line-height:1.08;margin-top:18px}
+  .sec-head h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(34px,5.4vw,58px);line-height:1.08;margin-top:18px;color:var(--ink)}
   .sec-head p{margin-top:22px;color:var(--muted);font-size:15px;font-weight:300}
 
   /* About */
-  .about{background:linear-gradient(180deg,#0a0a0b,#0c0c0f)}
+  .about{background:linear-gradient(180deg,#ffffff,#f6f9fe)}
   .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
-  .about-copy p{color:#cfcfca;font-size:15.5px;margin-bottom:22px;font-weight:300}
-  .about-copy strong{color:var(--gold-soft);font-weight:400}
-  .stat-card{border:1px solid var(--line);background:linear-gradient(160deg,var(--panel),#0d0d10);padding:44px 40px}
+  .about-copy p{color:#3a4a63;font-size:15.5px;margin-bottom:22px;font-weight:300}
+  .about-copy strong{color:var(--blue);font-weight:500}
+  .stat-card{border:1px solid var(--line);background:linear-gradient(165deg,#ffffff,#eef4fe);padding:44px 40px;border-radius:14px;box-shadow:0 24px 60px rgba(24,70,150,.10)}
   .stat-card .row{display:flex;justify-content:space-between;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
   .stat-card .row:last-child{border-bottom:0;padding-bottom:0}
   .stat-card .row:first-child{padding-top:0}
-  .stat-card .k{font-family:"Jost",sans-serif;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted)}
-  .stat-card .v{font-family:"Cormorant Garamond",serif;font-size:30px;color:var(--gold-soft)}
-  .stat-card .v small{font-size:14px;color:var(--muted);margin-left:6px;font-family:"Noto Sans JP"}
+  .stat-card .k{font-family:"Jost",sans-serif;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted);font-weight:500}
+  .stat-card .v{font-family:"Cormorant Garamond",serif;font-size:30px;color:var(--blue);font-weight:600}
+  .stat-card .v small{font-size:14px;color:var(--muted);margin-left:6px;font-family:"Noto Sans JP";font-weight:300}
 
   /* Handling */
   .items{background:var(--bg)}
-  .items-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
-  .item{padding:52px 40px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.4s ease;position:relative}
+  .items-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .item{padding:52px 40px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.4s ease;position:relative;background:#fff}
   .item:nth-child(3n){border-right:0}
   .item:nth-last-child(-n+3){border-bottom:0}
-  .item .no{font-family:"Cormorant Garamond",serif;font-size:20px;color:var(--gold);opacity:.7}
-  .item h3{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:27px;margin:16px 0 6px}
+  .item .no{font-family:"Cormorant Garamond",serif;font-size:20px;color:var(--blue);opacity:.75;font-weight:600}
+  .item h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:27px;margin:16px 0 6px;color:var(--ink)}
   .item .jp{color:var(--muted);font-size:13px;letter-spacing:.05em}
-  .item:hover{background:linear-gradient(160deg,var(--panel),#0b0b0e)}
-  .item:hover h3{color:var(--gold-soft)}
+  .item:hover{background:var(--blue-soft)}
+  .item:hover h3{color:var(--blue)}
 
   /* Channels */
-  .channels{background:linear-gradient(180deg,#0c0c0f,#0a0a0b)}
+  .channels{background:linear-gradient(180deg,#f6f9fe,#ffffff)}
   .chan-list{display:flex;flex-wrap:wrap;gap:14px}
   .chip{
-    font-family:"Jost",sans-serif;letter-spacing:.1em;font-size:13px;
-    border:1px solid var(--line);padding:14px 24px;color:#cdcdc9;
+    font-family:"Jost",sans-serif;letter-spacing:.08em;font-size:13px;font-weight:400;
+    border:1px solid var(--line);padding:14px 24px;color:var(--text);background:#fff;border-radius:999px;
     transition:.35s ease;
   }
-  .chip:hover{border-color:var(--gold);color:var(--gold-soft)}
+  .chip:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)}
   .chan-note{margin-top:40px;color:var(--muted);font-size:14px;max-width:640px;font-weight:300}
 
+  /* Company profile */
+  .company{background:linear-gradient(180deg,#ffffff,#f4f8fe)}
+  .profile{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 24px 60px rgba(24,70,150,.08)}
+  .prow{display:grid;grid-template-columns:230px 1fr;border-bottom:1px solid var(--line)}
+  .prow:last-child{border-bottom:0}
+  .prow dt{padding:26px 34px;background:#f4f8fe;font-family:"Jost",sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:12px;color:var(--blue);font-weight:500;display:flex;align-items:center}
+  .prow dd{padding:26px 34px;color:var(--ink);font-size:15px;font-weight:400}
+  .prow dd .sub{display:block;color:var(--muted);font-size:13px;font-weight:300;margin-top:4px}
+  .map-link{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}
+  .map-link:hover{text-decoration:underline}
+
   /* Contact */
-  .contact{background:var(--bg);text-align:center;padding:150px 0}
-  .contact h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(40px,7vw,86px);line-height:1.02}
-  .contact h2 em{color:var(--gold);font-style:italic}
-  .contact p{margin:28px auto 44px;max-width:520px;color:var(--muted);font-size:15px;font-weight:300}
+  .contact{position:relative;background:linear-gradient(150deg,#123a86,#1857c4 55%,#2f7ff2);color:#fff;text-align:center;padding:150px 0;overflow:hidden}
+  .contact::before{content:"";position:absolute;inset:0;opacity:.5;
+    background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+    background-size:60px 60px;-webkit-mask-image:radial-gradient(700px 420px at 50% 0%,#000,transparent 75%);mask-image:radial-gradient(700px 420px at 50% 0%,#000,transparent 75%)}
+  .contact .inr{position:relative;z-index:2}
+  .contact .eyebrow{color:#bcd6ff}
+  .contact h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(40px,7vw,86px);line-height:1.02;color:#fff}
+  .contact h2 em{color:#bcd6ff;font-style:italic}
+  .contact p{margin:28px auto 44px;max-width:520px;color:#d6e4ff;font-size:15px;font-weight:300}
+  .btn-white{background:#fff;color:var(--blue);box-shadow:0 14px 40px rgba(0,20,60,.25)}
+  .btn-white:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
 
   /* Footer */
   footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg-2)}
   .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-  .foot .brand{font-size:14px}
+  .foot .brand{font-size:14px;color:var(--ink)}
   .foot .cr{font-family:"Jost",sans-serif;font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
 
   /* reveal */
@@ -171,6 +197,9 @@
     .item{border-right:0}
     .item:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
     .item:last-child{border-bottom:0}
+    .prow{grid-template-columns:1fr}
+    .prow dt{padding-bottom:0;background:#fff}
+    .prow dd{padding-top:12px}
     .block{padding:96px 0}
   }
 </style>
@@ -184,6 +213,7 @@
       <a href="#about">About</a>
       <a href="#items">Handling</a>
       <a href="#channels">Market</a>
+      <a href="#company">Company</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -191,14 +221,14 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"><div class="grain"></div></div>
+  <div class="hero-bg"></div>
   <div class="wrap hero-inner">
     <div class="eyebrow">Brand Reuse Company</div>
     <h1 class="serif">Ad<span class="amp">·</span>mate</h1>
     <div class="jp-name">株式会社アドメイト</div>
     <p class="lead">価値あるブランド品を見極め、丁寧に整え、次の持ち主のもとへ。国内外のマーケットをつなぐ、ブランドリユースの会社です。</p>
     <div class="hero-actions">
-      <a href="#about" class="btn">事業を見る <span class="arw">&rarr;</span></a>
+      <a href="#about" class="btn btn-fill">事業を見る <span class="arw">&rarr;</span></a>
       <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
     </div>
   </div>
@@ -268,19 +298,36 @@
   </div>
 </section>
 
+<!-- COMPANY -->
+<section id="company" class="block company">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Company</div>
+      <h2 class="serif">会社概要</h2>
+    </div>
+    <dl class="profile reveal">
+      <div class="prow"><dt>商号</dt><dd>株式会社アドメイト<span class="sub">ADMATE Inc.</span></dd></div>
+      <div class="prow"><dt>代表者</dt><dd>寺尾 礼（テラオ アキラ）</dd></div>
+      <div class="prow"><dt>所在地</dt><dd>〒439-0006　静岡県菊川市堀之内780-3
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%9D%99%E5%B2%A1%E7%9C%8C%E8%8F%8A%E5%B7%9D%E5%B8%82%E5%A0%80%E4%B9%8B%E5%86%85780-3" target="_blank" rel="noopener">Google マップで見る &rarr;</a></dd></div>
+      <div class="prow"><dt>事業内容</dt><dd>ブランド品のリユース（買取・販売）<span class="sub">国内外マーケットへの出品・販売</span></dd></div>
+    </dl>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="contact">
-  <div class="wrap reveal">
+  <div class="wrap inr reveal">
     <div class="eyebrow">Contact</div>
     <h2 class="serif">Let&rsquo;s <em>talk.</em></h2>
     <p>買取のご相談、お取引・協業のお問い合わせなど、お気軽にご連絡ください。</p>
-    <a href="mailto:mihimaru0728@yahoo.co.jp" class="btn">メールで問い合わせる <span class="arw">&rarr;</span></a>
+    <a href="mailto:mikata.shizuoka@gmail.com" class="btn btn-white">メールで問い合わせる <span class="arw">&rarr;</span></a>
   </div>
 </section>
 
 <footer>
   <div class="wrap foot">
-    <div class="brand">ADMATE<span style="color:var(--gold)">.</span> &nbsp;株式会社アドメイト</div>
+    <div class="brand">ADMATE<span style="color:var(--blue)">.</span> &nbsp;株式会社アドメイト</div>
     <div class="cr">&copy; 2026 ADMATE Inc.</div>
   </div>
 </footer>
