@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社アドメイト | ADMATE Inc.</title>
+<meta name="description" content="株式会社アドメイト（ADMATE Inc.）— ブランド品のリユース事業。バッグ・時計・ジュエリー・財布・小物を、国内外のマーケットへ。">
+<meta property="og:title" content="株式会社アドメイト | ADMATE Inc.">
+<meta property="og:description" content="ブランド品のリユース事業。確かな品を、次の持ち主へ。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-2:#101013;
+    --panel:#141418;
+    --line:rgba(255,255,255,.08);
+    --text:#ececeb;
+    --muted:#9a9a97;
+    --gold:#c9a86a;
+    --gold-soft:#e3cfa3;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Noto Sans JP","Jost",sans-serif;
+    font-weight:300;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  .serif{font-family:"Cormorant Garamond",serif}
+  .eyebrow{
+    font-family:"Jost",sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.42em;
+    font-size:11px;
+    color:var(--gold);
+    font-weight:400;
+  }
+
+  /* Header */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    backdrop-filter:blur(12px);
+    background:rgba(10,10,11,.55);
+    border-bottom:1px solid transparent;
+    transition:border-color .4s ease, background .4s ease;
+  }
+  header.scrolled{border-bottom-color:var(--line);background:rgba(10,10,11,.82)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:"Jost",sans-serif;letter-spacing:.34em;font-size:16px;font-weight:400;padding-left:.34em}
+  .brand span{color:var(--gold)}
+  .menu{display:flex;gap:38px;font-family:"Jost",sans-serif;letter-spacing:.16em;font-size:12.5px;text-transform:uppercase;color:var(--muted)}
+  .menu a{position:relative;transition:color .3s}
+  .menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width .35s ease}
+  .menu a:hover{color:var(--text)}
+  .menu a:hover::after{width:100%}
+
+  /* Hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(1100px 620px at 78% 18%, rgba(201,168,106,.16), transparent 60%),
+      radial-gradient(760px 620px at 8% 92%, rgba(201,168,106,.07), transparent 58%),
+      linear-gradient(180deg,#0a0a0b 0%,#0c0c0f 55%,#0a0a0b 100%);
+  }
+  .grain{position:absolute;inset:0;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .hero-inner{position:relative;z-index:2;width:100%}
+  .hero h1{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:500;
+    font-size:clamp(58px,12vw,150px);
+    line-height:.94;
+    letter-spacing:.02em;
+    margin:26px 0 8px;
+  }
+  .hero h1 .amp{color:var(--gold);font-style:italic;font-weight:400}
+  .hero .jp-name{font-size:clamp(16px,2.4vw,22px);letter-spacing:.5em;color:var(--muted);font-weight:300;padding-left:.5em}
+  .hero .lead{
+    margin-top:38px;max-width:540px;font-size:15.5px;color:#cfcfca;font-weight:300;line-height:2.05;
+  }
+  .hero-actions{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:"Jost",sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:12.5px;
+    padding:16px 30px;border:1px solid var(--gold);color:var(--gold-soft);
+    transition:.35s ease;
+  }
+  .btn:hover{background:var(--gold);color:#0a0a0b}
+  .btn .arw{transition:transform .35s ease}
+  .btn:hover .arw{transform:translateX(5px)}
+  .btn-ghost{border-color:var(--line);color:var(--muted)}
+  .btn-ghost:hover{background:transparent;border-color:var(--text);color:var(--text)}
+  .scroll-cue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;font-family:"Jost",sans-serif;font-size:10px;letter-spacing:.34em;color:var(--muted);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .scroll-cue .bar{width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.4s ease-in-out infinite}
+  @keyframes cue{0%,100%{opacity:.3;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+
+  /* Sections */
+  section{position:relative}
+  .block{padding:130px 0}
+  .sec-head{margin-bottom:64px;max-width:720px}
+  .sec-head h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(34px,5.4vw,58px);line-height:1.08;margin-top:18px}
+  .sec-head p{margin-top:22px;color:var(--muted);font-size:15px;font-weight:300}
+
+  /* About */
+  .about{background:linear-gradient(180deg,#0a0a0b,#0c0c0f)}
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+  .about-copy p{color:#cfcfca;font-size:15.5px;margin-bottom:22px;font-weight:300}
+  .about-copy strong{color:var(--gold-soft);font-weight:400}
+  .stat-card{border:1px solid var(--line);background:linear-gradient(160deg,var(--panel),#0d0d10);padding:44px 40px}
+  .stat-card .row{display:flex;justify-content:space-between;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+  .stat-card .row:last-child{border-bottom:0;padding-bottom:0}
+  .stat-card .row:first-child{padding-top:0}
+  .stat-card .k{font-family:"Jost",sans-serif;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--muted)}
+  .stat-card .v{font-family:"Cormorant Garamond",serif;font-size:30px;color:var(--gold-soft)}
+  .stat-card .v small{font-size:14px;color:var(--muted);margin-left:6px;font-family:"Noto Sans JP"}
+
+  /* Handling */
+  .items{background:var(--bg)}
+  .items-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+  .item{padding:52px 40px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.4s ease;position:relative}
+  .item:nth-child(3n){border-right:0}
+  .item:nth-last-child(-n+3){border-bottom:0}
+  .item .no{font-family:"Cormorant Garamond",serif;font-size:20px;color:var(--gold);opacity:.7}
+  .item h3{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:27px;margin:16px 0 6px}
+  .item .jp{color:var(--muted);font-size:13px;letter-spacing:.05em}
+  .item:hover{background:linear-gradient(160deg,var(--panel),#0b0b0e)}
+  .item:hover h3{color:var(--gold-soft)}
+
+  /* Channels */
+  .channels{background:linear-gradient(180deg,#0c0c0f,#0a0a0b)}
+  .chan-list{display:flex;flex-wrap:wrap;gap:14px}
+  .chip{
+    font-family:"Jost",sans-serif;letter-spacing:.1em;font-size:13px;
+    border:1px solid var(--line);padding:14px 24px;color:#cdcdc9;
+    transition:.35s ease;
+  }
+  .chip:hover{border-color:var(--gold);color:var(--gold-soft)}
+  .chan-note{margin-top:40px;color:var(--muted);font-size:14px;max-width:640px;font-weight:300}
+
+  /* Contact */
+  .contact{background:var(--bg);text-align:center;padding:150px 0}
+  .contact h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(40px,7vw,86px);line-height:1.02}
+  .contact h2 em{color:var(--gold);font-style:italic}
+  .contact p{margin:28px auto 44px;max-width:520px;color:var(--muted);font-size:15px;font-weight:300}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg-2)}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+  .foot .brand{font-size:14px}
+  .foot .cr{font-family:"Jost",sans-serif;font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .menu{display:none}
+    .about-grid{grid-template-columns:1fr;gap:44px}
+    .items-grid{grid-template-columns:1fr}
+    .item{border-right:0}
+    .item:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
+    .item:last-child{border-bottom:0}
+    .block{padding:96px 0}
+  }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <div class="brand">ADMATE<span>.</span></div>
+    <nav class="menu">
+      <a href="#about">About</a>
+      <a href="#items">Handling</a>
+      <a href="#channels">Market</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><div class="grain"></div></div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Brand Reuse Company</div>
+    <h1 class="serif">Ad<span class="amp">·</span>mate</h1>
+    <div class="jp-name">株式会社アドメイト</div>
+    <p class="lead">価値あるブランド品を見極め、丁寧に整え、次の持ち主のもとへ。国内外のマーケットをつなぐ、ブランドリユースの会社です。</p>
+    <div class="hero-actions">
+      <a href="#about" class="btn">事業を見る <span class="arw">&rarr;</span></a>
+      <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><div class="bar"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="block about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <div class="sec-head" style="margin-bottom:40px">
+          <div class="eyebrow">About</div>
+          <h2 class="serif">確かな品を、<br>次の一人へ。</h2>
+        </div>
+        <p>株式会社アドメイトは、<strong>ブランド品のリユース</strong>を事業とする会社です。バッグ・時計・ジュエリーをはじめとする一点ものを、専門の目で見極めて仕入れ、状態を丁寧に整えたうえで販売しています。</p>
+        <p>まだ使えるものを捨てずに循環させること。それは、持ち主にとっての適正な価値の実現であり、<strong>資源を無駄にしない選択</strong>でもあります。私たちは、その橋渡し役でありたいと考えています。</p>
+        <p>国内のフリマ・オークションから海外マーケットまで、複数の販路を横断して最適な買い手へ届ける。それがアドメイトの仕事です。</p>
+      </div>
+      <div class="stat-card reveal">
+        <div class="row"><span class="k">Business</span><span class="v serif">Reuse</span></div>
+        <div class="row"><span class="k">Category</span><span class="v serif">Luxury <small>ブランド品</small></span></div>
+        <div class="row"><span class="k">Market</span><span class="v serif">JP <small>&</small> Global</span></div>
+        <div class="row"><span class="k">Sourcing</span><span class="v serif">Auction</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HANDLING -->
+<section id="items" class="block items">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Handling</div>
+      <h2 class="serif">取り扱う品目</h2>
+      <p>一つひとつ状態を確認し、価値に見合う形で次の市場へ送り出します。</p>
+    </div>
+    <div class="items-grid reveal">
+      <div class="item"><div class="no">01</div><h3 class="serif">Bags</h3><div class="jp">ブランドバッグ</div></div>
+      <div class="item"><div class="no">02</div><h3 class="serif">Watches</h3><div class="jp">時計</div></div>
+      <div class="item"><div class="no">03</div><h3 class="serif">Jewelry</h3><div class="jp">ジュエリー・貴金属</div></div>
+      <div class="item"><div class="no">04</div><h3 class="serif">Wallets</h3><div class="jp">財布・革小物</div></div>
+      <div class="item"><div class="no">05</div><h3 class="serif">Accessories</h3><div class="jp">ベルト・アクセサリー</div></div>
+      <div class="item"><div class="no">06</div><h3 class="serif">Apparel</h3><div class="jp">衣類・その他</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section id="channels" class="block channels">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Market</div>
+      <h2 class="serif">販売チャネル</h2>
+      <p>国内外の複数マーケットを横断し、それぞれの品にもっとも合う買い手のもとへ届けます。</p>
+    </div>
+    <div class="chan-list reveal">
+      <span class="chip">メルカリ Shops</span>
+      <span class="chip">eBay</span>
+      <span class="chip">BASE</span>
+      <span class="chip">ラクマ</span>
+      <span class="chip">ヤフオク</span>
+      <span class="chip">Yahoo!フリマ</span>
+      <span class="chip">業者オークション</span>
+    </div>
+    <p class="chan-note">それぞれの販路の特性を踏まえ、価格・スピード・届けたい相手に応じて出品先を使い分けています。</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap reveal">
+    <div class="eyebrow">Contact</div>
+    <h2 class="serif">Let&rsquo;s <em>talk.</em></h2>
+    <p>買取のご相談、お取引・協業のお問い合わせなど、お気軽にご連絡ください。</p>
+    <a href="mailto:mihimaru0728@yahoo.co.jp" class="btn">メールで問い合わせる <span class="arw">&rarr;</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand">ADMATE<span style="color:var(--gold)">.</span> &nbsp;株式会社アドメイト</div>
+    <div class="cr">&copy; 2026 ADMATE Inc.</div>
+  </div>
+</footer>
+
+<script>
+  var hdr=document.getElementById('hdr');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>20){hdr.classList.add('scrolled')}else{hdr.classList.remove('scrolled')}
+  });
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
