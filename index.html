@@ -167,6 +167,16 @@
   .map-link{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}
   .map-link:hover{text-decoration:underline}
 
+  /* Message */
+  .message{background:var(--bg)}
+  .msg-inner{max-width:780px}
+  .msg-inner h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(30px,4.8vw,52px);color:var(--ink);margin:14px 0 34px;line-height:1.1}
+  .msg-body{font-size:16px;line-height:2.15;color:#33445e;font-weight:300;margin-bottom:20px}
+  .msg-body strong{color:var(--blue);font-weight:500}
+  .msg-sign{margin-top:34px;padding-top:26px;border-top:1px solid var(--line);display:flex;align-items:baseline;gap:14px}
+  .msg-sign .role{font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .msg-sign .name{font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--blue);letter-spacing:.03em}
+
   /* Contact */
   .contact{position:relative;background:linear-gradient(150deg,#123a86,#1857c4 55%,#2f7ff2);color:#fff;text-align:center;padding:150px 0;overflow:hidden}
   .contact::before{content:"";position:absolute;inset:0;opacity:.5;
@@ -212,7 +222,8 @@
     <nav class="menu">
       <a href="#about">About</a>
       <a href="#items">Handling</a>
-      <a href="#channels">Market</a>
+      <a href="#channels">Services</a>
+      <a href="#message">Message</a>
       <a href="#company">Company</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -281,20 +292,35 @@
 <section id="channels" class="block channels">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="eyebrow">Market</div>
-      <h2 class="serif">販売チャネル</h2>
-      <p>国内外の複数マーケットを横断し、それぞれの品にもっとも合う買い手のもとへ届けます。</p>
+      <div class="eyebrow">Services</div>
+      <h2 class="serif">事業領域</h2>
+      <p>仕入れから販売まで一貫して手がけ、国内はもちろん海外市場へも価値を届けます。</p>
     </div>
     <div class="chan-list reveal">
-      <span class="chip">メルカリ Shops</span>
-      <span class="chip">eBay</span>
-      <span class="chip">BASE</span>
-      <span class="chip">ラクマ</span>
-      <span class="chip">ヤフオク</span>
-      <span class="chip">Yahoo!フリマ</span>
+      <span class="chip">買取</span>
+      <span class="chip">販売・EC運営</span>
+      <span class="chip">輸出・海外販売</span>
+      <span class="chip">卸売</span>
       <span class="chip">業者オークション</span>
     </div>
-    <p class="chan-note">それぞれの販路の特性を踏まえ、価格・スピード・届けたい相手に応じて出品先を使い分けています。</p>
+    <p class="chan-note">それぞれの品の価値がもっとも活きる形で、国内外の最適な買い手のもとへ届けます。</p>
+  </div>
+</section>
+
+<!-- MESSAGE -->
+<section id="message" class="block message">
+  <div class="wrap">
+    <div class="msg-inner reveal">
+      <div class="eyebrow">Message</div>
+      <h2 class="serif">まだ使えるものを、<br>次の誰かの一番へ。</h2>
+      <p class="msg-body">リユースの仕事は、ものを大切に思う気持ちから始まります。一つの品には、それを選び、使ってきた方の時間が宿っています。</p>
+      <p class="msg-body">私たちアドメイトは、その価値を正しく見極め、<strong>次に必要とする方のもとへ、誠実な形でおつなぎすること</strong>を何より大切にしています。国内から海外まで、一つでも多くの品が新しい持ち主のもとで生き続けるように。</p>
+      <p class="msg-body">目の前の一品一品と丁寧に向き合い、お客様にも、社会にも、信頼される会社であり続けられるよう努めてまいります。</p>
+      <div class="msg-sign">
+        <span class="role">代表取締役</span>
+        <span class="name serif">Akira Terao</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -307,10 +333,14 @@
     </div>
     <dl class="profile reveal">
       <div class="prow"><dt>商号</dt><dd>株式会社アドメイト<span class="sub">ADMATE Inc.</span></dd></div>
-      <div class="prow"><dt>代表者</dt><dd>寺尾 礼（テラオ アキラ）</dd></div>
+      <div class="prow"><dt>設立</dt><dd>2023年12月</dd></div>
+      <div class="prow"><dt>資本金</dt><dd>100万円</dd></div>
+      <div class="prow"><dt>代表者</dt><dd>代表取締役　寺尾 礼（テラオ アキラ）</dd></div>
       <div class="prow"><dt>所在地</dt><dd>〒439-0006　静岡県菊川市堀之内780-3
         <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E9%9D%99%E5%B2%A1%E7%9C%8C%E8%8F%8A%E5%B7%9D%E5%B8%82%E5%A0%80%E4%B9%8B%E5%86%85780-3" target="_blank" rel="noopener">Google マップで見る &rarr;</a></dd></div>
-      <div class="prow"><dt>事業内容</dt><dd>ブランド品のリユース（買取・販売）<span class="sub">国内外マーケットへの出品・販売</span></dd></div>
+      <div class="prow"><dt>電話</dt><dd><a href="tel:09022242854" style="color:var(--blue);font-weight:500">090-2224-2854</a></dd></div>
+      <div class="prow"><dt>事業内容</dt><dd>ブランド品のリユース（買取・販売）／輸出・海外販売／卸売／EC運営</dd></div>
+      <div class="prow"><dt>古物商許可</dt><dd>静岡県公安委員会　第49122A000233号</dd></div>
     </dl>
   </div>
 </section>
